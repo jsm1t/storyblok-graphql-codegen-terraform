@@ -1,4 +1,4 @@
-import { camelCase, paramCase, sentenceCase, snakeCase } from 'change-case'
+import { camelCase, kebabCase, sentenceCase, snakeCase } from 'change-case'
 import {
   BooleanValueNode,
   ConstListValueNode,
@@ -608,7 +608,7 @@ const toComponentField = (
             'toolbar'
           )
             ?.values.map((v) =>
-              v.kind === 'EnumValue' ? paramCase(v.value) : undefined
+              v.kind === 'EnumValue' ? kebabCase(v.value) : undefined
             )
             .concat(components?.length ? ['blok'] : undefined)
             .filter(isValue)
@@ -640,7 +640,7 @@ const toComponentField = (
             'toolbar'
           )
             ?.values.map((v) =>
-              v.kind === 'EnumValue' ? paramCase(v.value) : undefined
+              v.kind === 'EnumValue' ? kebabCase(v.value) : undefined
             )
             .filter(isValue)
 

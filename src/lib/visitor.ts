@@ -1,4 +1,4 @@
-import { paramCase, snakeCase } from 'change-case'
+import { kebabCase, snakeCase } from 'change-case'
 import {
   GraphQLSchema,
   ObjectTypeDefinitionNode,
@@ -53,7 +53,7 @@ export const createObjectTypeVisitor =
         'storyblok_component_group',
         snakeCase(componentGroupName),
         {
-          name: paramCase(componentGroupName),
+          name: kebabCase(componentGroupName),
           space_id: spaceId,
         }
       )
