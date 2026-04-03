@@ -29,6 +29,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Audit
+        run: pnpm audit
+        continue-on-error: true
+
       - name: Lint
         run: pnpm lint
 
