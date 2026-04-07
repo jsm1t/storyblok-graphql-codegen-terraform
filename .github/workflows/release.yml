@@ -72,7 +72,6 @@ jobs:
           title: 'Release new version'
           commit: 'update version'
           publish: pnpm publish:ci
-          version: pnpm publish:version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
